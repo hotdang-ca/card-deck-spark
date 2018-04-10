@@ -1,5 +1,5 @@
-import ca.hotdang.Card;
-import ca.hotdang.DeckOfCards;
+import ca.hotdang.carddeck.Card;
+import ca.hotdang.carddeck.DeckOfCards;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -55,8 +55,8 @@ class DeckOfCardsTest {
         Card.Rank expectedRank = Card.Rank.Ace;
 
         Card topCard = testDeck.getTopCard();
-        assertEquals(expectedSuit, topCard.suit, "Top ca.hotdang.Card Suit is Spades");
-        assertEquals(expectedRank, topCard.rank, "Top ca.hotdang.Card Rank is Ace");
+        assertEquals(expectedSuit, topCard.suit, "Top Card Suit is Spades");
+        assertEquals(expectedRank, topCard.rank, "Top Card Rank is Ace");
     }
 
     @Test
@@ -75,8 +75,8 @@ class DeckOfCardsTest {
         Card expectedCard = new Card(Card.Suit.Diamonds, Card.Rank.King);
         Card actualCard = testDeck.getCardAtIndex(testDeck.length() - 1);
 
-        assertEquals(expectedCard.suit, actualCard.suit, "ca.hotdang.Card suit at index in deck matches");
-        assertEquals(expectedCard.rank, actualCard.rank, "ca.hotdang.Card rank at index in deck matches");
+        assertEquals(expectedCard.suit, actualCard.suit, "Card suit at index in deck matches");
+        assertEquals(expectedCard.rank, actualCard.rank, "Card rank at index in deck matches");
     }
 
     @Test
@@ -89,7 +89,7 @@ class DeckOfCardsTest {
 
         assertEquals(expectedCard.suit, actualCard.suit, "Dealt card is first in a new deck by suit.");
         assertEquals(expectedCard.rank, actualCard.rank, "Dealt card is first in a new deck by rank.");
-        assertEquals(51, testDeck.length(), "Deck of cards is short one ca.hotdang.Card.");
+        assertEquals(51, testDeck.length(), "Deck of cards is short one Card.");
         assertEquals(-1, testDeck.indexOfCard(expectedCard.suit, expectedCard.rank), "Dealt card is not found in the deck.");
 
         assertEquals(newTopCard.suit, testDeck.getTopCard().suit, "New top card is spades");

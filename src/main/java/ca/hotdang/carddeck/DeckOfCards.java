@@ -1,4 +1,4 @@
-package ca.hotdang;
+package ca.hotdang.carddeck;
 
 import java.util.ArrayList;
 import java.util.Collections;

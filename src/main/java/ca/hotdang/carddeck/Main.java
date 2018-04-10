@@ -1,4 +1,4 @@
-package ca.hotdang;
+package ca.hotdang.carddeck;
 
 import com.google.gson.Gson;
 import static spark.Spark.*;

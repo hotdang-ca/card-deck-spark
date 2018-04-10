@@ -20,32 +20,13 @@ Nice to have:
 
 * IntelliJ IDEA
 
-Drop into a shell in the main project directory, and issue the maven package command:
+Drop into a shell in the main project directory, and issue the Mojo maven compile command:
 
 ```shell
-mvn package
+mvn compile exec:java
 ```
 
-You'll see some expected results:
-
-```shell
-[INFO] Building jar: <path-to>/target/card-deck-1.0-SNAPSHOT.jar
-
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time: 3.098 s
-[INFO] Finished at: 2018-04-10T12:10:06-06:00
-[INFO] Final Memory: 26M/305M
-[INFO] ------------------------------------------------------------------------
-```
-
-Then, run:
-
-```shell
-java -cp target/card-deck-1.0-SNAPSHOT.jar ca.hotdang.card-deck.Main
-```
-
-Or, open the solution in IntelliJ IDEA, and run the "Spark Server" task. Actually, that should be fine.
+Or, open the solution in IntelliJ IDEA, and run the "Spark Server" task. 
 
 ## Endpoints
 
@@ -57,7 +38,7 @@ Provided you get the solution running the following endpoints provide functional
 
 `GET /deck/shuffle` - shuffles the deck, returns the current state of the deck
 
-`GET /deck/describe` - I love this one... rather than returning a deck, this describes the current deck in either long or short format.
+`GET /deck/describe/` - I love this one... rather than returning a deck, this describes the current deck in either long or short format.
 To get the short format, include url param `type=short`.
 
 `GET /deck/deal` - Deals a card. Output will be the card you were dealt. It will be removed from the internal instance (because it's now in the hands of a player, presumably).

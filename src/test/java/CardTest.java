@@ -1,4 +1,4 @@
-import ca.hotdang.Card;
+import ca.hotdang.carddeck.Card;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

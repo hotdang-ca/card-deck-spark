@@ -1,4 +1,4 @@
-package ca.hotdang;
+package ca.hotdang.carddeck;
 
 public class Card {
     // REFERENCE: https://en.wikipedia.org/wiki/Standard_52-card_deck
@@ -27,7 +27,7 @@ public class Card {
     public Rank rank;
 
     /**
-     * Standard Instantiator for a ca.hotdang.Card
+     * Standard Instantiator for a Card
      * @param suit - What suit (from enum)
      * @param rank - What rank (from enum)
      */
