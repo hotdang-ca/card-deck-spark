@@ -1,3 +1,5 @@
+package ca.hotdang;
+
 import com.google.gson.Gson;
 import static spark.Spark.*;
 

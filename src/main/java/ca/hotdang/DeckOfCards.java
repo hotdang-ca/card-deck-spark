@@ -1,6 +1,7 @@
+package ca.hotdang;
+
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 
 public class DeckOfCards {
     private ArrayList<Card> deck;
