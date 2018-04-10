@@ -57,7 +57,7 @@ Provided you get the solution running the following endpoints provide functional
 
 `GET /deck/shuffle` - shuffles the deck, returns the current state of the deck
 
-`GET /deck/describe/` - I love this one... rather than returning a deck, this describes the current deck in either long or short format.
+`GET /deck/describe` - I love this one... rather than returning a deck, this describes the current deck in either long or short format.
 To get the short format, include url param `type=short`.
 
 `GET /deck/deal` - Deals a card. Output will be the card you were dealt. It will be removed from the internal instance (because it's now in the hands of a player, presumably).
