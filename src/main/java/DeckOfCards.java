@@ -97,6 +97,18 @@ public class DeckOfCards {
     }
 
     /**
+     * Remove the card at position specified
+     */
+    public Card dealCardAtIndex(int position) {
+        if (this.deck != null) {
+            Card dealtCard = this.deck.remove(0);
+            return dealtCard;
+        }
+
+        return null;
+    }
+
+    /**
      * Shuffles the deck.
      * I was prepared to write an arraylist shuffler, but collections provide this functionality already :)
      * Why re-invent the wheel?

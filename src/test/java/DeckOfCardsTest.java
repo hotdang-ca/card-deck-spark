@@ -76,4 +76,21 @@ class DeckOfCardsTest {
         assertEquals(expectedCard.suit, actualCard.suit, "Card suit at index in deck matches");
         assertEquals(expectedCard.rank, actualCard.rank, "Card rank at index in deck matches");
     }
+
+    @Test
+    void dealCardAtIndex() {
+        DeckOfCards testDeck = new DeckOfCards();
+        Card expectedCard = new Card(Card.Suit.Spades, Card.Rank.Ace);
+        Card newTopCard = new Card(Card.Suit.Spades, Card.Rank.Two);
+
+        Card actualCard = testDeck.dealCardAtIndex(0);
+
+        assertEquals(expectedCard.suit, actualCard.suit, "Dealt card is first in a new deck by suit.");
+        assertEquals(expectedCard.rank, actualCard.rank, "Dealt card is first in a new deck by rank.");
+        assertEquals(51, testDeck.length(), "Deck of cards is short one Card.");
+        assertEquals(-1, testDeck.indexOfCard(expectedCard.suit, expectedCard.rank), "Dealt card is not found in the deck.");
+
+        assertEquals(newTopCard.suit, testDeck.getTopCard().suit, "New top card is spades");
+        assertEquals(newTopCard.rank, testDeck.getTopCard().rank, "New top card is two");
+    }
 }

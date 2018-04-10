@@ -79,6 +79,18 @@ public class Main {
                 res.type(JSON_RESPONSE);
                 return gson.toJson(deckOfCards.getDescribedDeck(isShortDescription));
             });
+
+            /**
+             * Returns the top card, removing it from the deck
+             */
+            get("/deal", (req, res) -> {
+                if (deckOfCards == null || deckOfCards.length() == 0) {
+                    deckOfCards = new DeckOfCards();
+                }
+
+                res.type(JSON_RESPONSE);
+                return gson.toJson(deckOfCards.dealCardAtIndex(0));
+            });
         });
     }
 }
